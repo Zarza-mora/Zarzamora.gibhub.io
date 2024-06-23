@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Carreras de Medicina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #EF8967;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .career {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .career h2 {
+            color: #DC67EF;
+            margin-bottom: 10px;
+        }
+
+        .career p {
+            margin-bottom: 10px;
+        }
+
+        .details {
+            display: none;
+        }
+
+        .show-details {
+            color: #DC67EF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="career">
+        <h2>Medicina General</h2>
+        <p>Provee atención primaria y diagnósticos generales en diversas áreas médicas.</p>
+        <p>Ámbitos de trabajo incluyen clínicas, consultorios privados y hospitales.</p>
+        <p class="show-details" onclick="toggleDetails('details1')">Ver más detalles</p>
+        <div id="details1" class="details">
+            <p>Los médicos generales tratan una amplia variedad de condiciones médicas y remiten a especialistas cuando es necesario.</p>
+        </div>
+    </div>
+
+    <div class="career">
+        <h2>Pediatría</h2>
+        <p>Atención médica especializada en niños y adolescentes, abordando su crecimiento y desarrollo.</p>
+        <p>Ámbitos de trabajo incluyen hospitales infantiles, consultorios pediátricos y clínicas especializadas.</p>
+        <p class="show-details" onclick="toggleDetails('details2')">Ver más detalles</p>
+        <div id="details2" class="details">
+            <p>Los pediatras realizan exámenes físicos, administran vacunas, y tratan enfermedades y trastornos específicos de los niños.</p>
+        </div>
+    </div>
+
+    <div class="career">
+        <h2>Cardiología</h2>
+        <p>Diagnóstico y tratamiento de enfermedades del corazón y sistema circulatorio.</p>
+        <p>Ámbitos de trabajo incluyen centros cardiológicos, hospitales y clínicas especializadas.</p>
+        <p class="show-details" onclick="toggleDetails('details3')">Ver más detalles</p>
+        <div id="details3" class="details">
+            <p>Los cardiólogos utilizan pruebas diagnósticas como electrocardiogramas (ECG) y ecocardiografías para evaluar la salud del corazón.</p>
+        </div>
+    </div>
+
+    <div class="career">
+        <h2>Cirugía</h2>
+        <p>Realización de procedimientos quirúrgicos para tratar enfermedades, lesiones y deformidades.</p>
+        <p>Subespecialidades incluyen cirugía general, ortopédica, cardiovascular, neurológica, entre otras.</p>
+        <p class="show-details" onclick="toggleDetails('details4')">Ver más detalles</p>
+        <div id="details4" class="details">
+            <p>Los cirujanos operan utilizando técnicas avanzadas para mejorar la salud y calidad de vida de los pacientes.</p>
+        </div>
+    </div>
+
+    <div class="career">
+        <h2>Neurología</h2>
+        <p>Diagnóstico y tratamiento de trastornos del sistema nervioso central y periférico.</p>
+        <p>Ámbitos de trabajo incluyen hospitales, clínicas neurológicas y centros de investigación.</p>
+        <p class="show-details" onclick="toggleDetails('details5')">Ver más detalles</p>
+        <div id="details5" class="details">
+            <p>Los neurólogos pueden tratar condiciones como el Parkinson, la esclerosis múltiple, y los accidentes cerebrovasculares.</p>
+        </div>
+    </div>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas? <a href="formulario.html"> Contactanos</a>.</p>
+    </section>
+    <script>
+        function toggleDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

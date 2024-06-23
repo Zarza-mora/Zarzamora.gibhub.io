@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #96C4C4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color:#FAB5E7;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #1C1C1C;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>¿Tienes dudas?</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Duda:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </div>
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p> <a href="Medicina.html"> Informacion</a>.</p>
+    </section>
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("nombre").value;
+            var email = document.getElementById("email").value;
+            var mensaje = document.getElementById("mensaje").value;
+
+            if (nombre.trim() == "" || email.trim() == "" || mensaje.trim() == "") {
+                alert("Por favor completa todos los campos.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
